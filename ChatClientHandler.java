@@ -89,8 +89,13 @@ public class ChatClientHandler extends Thread{
     
     //helpコマンド
     public void help() throws IOException{
-        send("命令一覧");
-        send("help, name, whoami, bye, post, users");
+        this.send("help  [処理可能な命令の一覧を表示]");
+        this.send("name  [名前の変更を行う]");
+        this.send("whoami  [設定されている名前を表示]");
+        this.send("bye  [チャットを終了]");
+        this.send("post  [チャットに参加している全員にメッセージを送信]");
+        this.send("users  [チャットに参加している人の名前を表示]");
+
     }
     
     //nameコマンド
